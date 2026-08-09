@@ -1,24 +1,142 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> AI Voice Summarizer</title>
-        <link 
-        rel="'stylesheet"
-         href="style.css"
-        >
-    </head>
-    <body>
-        <h1> AI Voice Note Summarizer</h1>
-        <p> Upload an audio file below.</p>
-        <input 
-          type="file"
-          id="audiofile"
-        >
-        <button id="uploadbtn">Upload</button>
-        <p id="status"></p>
-        <h2>Transcript</h2>
-        <p id="transcript"></p>
-        <script 
-        src="script.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">AI VOICE TRANSLATOR</div>
+        <button class="top-button" onclick="document.getElementById('translator').scrollIntoView({behavior:'smooth'})">
+            GET STARTED TODAY!
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR AI LANGUAGE ASSISTANT</p>
+
+                <h1>UNLOCK GLOBAL<br>COMMUNICATION</h1>
+
+                <p class="hero-text">
+                    Turn your voice into text, translate it into Korean,
+                    and get easy-to-read pronunciation with AI.
+                </p>
+
+                <a href="#translator" class="hero-link">START TRANSLATING →</a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="globe">◎</div>
+                <div class="wave wave-one"></div>
+                <div class="wave wave-two"></div>
+                <div class="wave wave-three"></div>
+                <span class="visual-label">SPEECH • AI • TRANSLATION</span>
+            </div>
+        </section>
+
+        <section class="translator-section" id="translator">
+            <div class="section-heading">
+                <p class="eyebrow dark">AI VOICE TRANSLATOR</p>
+                <h2>Translate your voice in seconds.</h2>
+                <p>
+                    Upload an audio file and let Whisper + Qwen process
+                    your speech automatically.
+                </p>
+            </div>
+
+            <div class="translator-card">
+                <div class="upload-area" id="dropArea">
+                    <div class="upload-icon">↑</div>
+                    <h3>UPLOAD YOUR AUDIO</h3>
+                    <p id="fileName">MP3, WAV, MP4 and other supported audio/video files</p>
+
+                    <input type="file" id="audiofile" accept="audio/*,video/*">
+
+                    <label for="audiofile" class="choose-button">
+                        CHOOSE FILE
+                    </label>
+
+                    <button id="uploadbtn" class="translate-button">
+                        TRANSLATE AUDIO
+                    </button>
+                </div>
+
+                <p id="status" class="status">Ready to translate.</p>
+
+                <div class="results">
+                    <article class="result-card">
+                        <span class="result-number">01</span>
+                        <div>
+                            <p class="result-label">TRANSCRIPT</p>
+                            <h3>Original Speech</h3>
+                            <p id="transcript" class="result-text">
+                                Your transcribed speech will appear here.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <span class="result-number">02</span>
+                        <div>
+                            <p class="result-label">TRANSLATION</p>
+                            <h3>한국어 번역</h3>
+                            <p id="translation" class="result-text">
+                                Your Korean translation will appear here.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <span class="result-number">03</span>
+                        <div>
+                            <p class="result-label">PRONUNCIATION</p>
+                            <h3>Romanized Korean</h3>
+                            <p id="pronunciation" class="result-text">
+                                Korean pronunciation will appear here.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-section">
+            <div>
+                <p class="eyebrow">HOW IT WORKS</p>
+                <h2>From voice to understanding.</h2>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <span>01</span>
+                    <h3>UPLOAD</h3>
+                    <p>Choose an audio or video file from your device.</p>
+                </div>
+
+                <div class="step">
+                    <span>02</span>
+                    <h3>TRANSCRIBE</h3>
+                    <p>Whisper converts your speech into text.</p>
+                </div>
+
+                <div class="step">
+                    <span>03</span>
+                    <h3>TRANSLATE</h3>
+                    <p>Qwen generates Korean translation and pronunciation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>AI VOICE TRANSLATOR</p>
+        <span>Speech → Text → Translation → Pronunciation</span>
+    </footer>
+    <script src="script.js?v=4"></script>
+</body>
 </html>
